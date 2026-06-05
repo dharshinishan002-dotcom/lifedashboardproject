@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    padding: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+}
+
+.sidebar li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Sections */
+.section {
+    display: none;
+    margin-top: 20px;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Inputs */
+input {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px;
+    margin-left: 5px;
+}
+
+/* List */
+li {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Completed */
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+/* 🌙 DARK MODE FULL STYLE */
+
+.dark {
+    background: #1e1e2f;
+    color: #ffffff;
+}
+
+/* Sidebar */
+.dark .sidebar {
+    background: rgba(40, 40, 60, 0.8);
+    color: white;
+}
+
+/* Cards */
+.dark .card {
+    background: rgba(40, 40, 60, 0.7);
+    color: white;
+}
+
+/* Inputs */
+.dark input {
+    background: #2c2c3a;
+    color: white;
+    border: none;
+}
+
+/* Buttons */
+.dark button {
+    background: #444;
+    color: white;
+}
+
+/* List items */
+.dark li {
+    color: white;
+}
+
+/* Header text */
+.dark .header h1 {
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+/* Completed */
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Buttons */
+button {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+    }
+
+    .sidebar li {
+        margin-right: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}/* PROFILE POPUP */
+.profile-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.profile-box input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.profile-box button {
+    margin: 5px;
+}
+
+/* Dark mode support */
+.dark .profile-box {
+    background: #2c2c3a;
+    color: white;
+}
+/* Completed */
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Buttons */
+button {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+    }
+
+    .sidebar li {
+        margin-right: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
