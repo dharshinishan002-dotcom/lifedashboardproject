@@ -8,7 +8,7 @@
 
 ## 🚀 Live Demo
 
-🔗 ## 🚀 Live Demo
+
 👉 https://dharshinishan002-dotcom.github.io/lifedashboardproject/
 
 ---
