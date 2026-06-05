@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>✨ My Life</h2>
+    <ul>
+        <li onclick="showSection('dashboard')">🏠 Dashboard</li>
+        <li onclick="showSection('goals')">🎯 Goals</li>
+        <li onclick="showSection('planner')">📅 Planner</li>
+        <li onclick="showSection('habits')">🧠 Habits</li>
+        <li onclick="openProfile()">🧾 Profile</li>
+    </ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+<div class="header">
+    <h1>Glow & Grow 🌸</h1>
+    <button onclick="toggleDarkMode()">🌙</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="section active">
+    <div class="cards">
+        <div class="card">
+            <h3>💡 Quote</h3>
+            <p id="quote"></p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Stats</h3>
+            <p id="stats"></p>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Time</h3>
+            <p id="clock"></p>
+        </div>
+    </div>
+</div>
+
+<!-- GOALS -->
+<div id="goals" class="section">
+    <h2>🎯 Goals</h2>
+    <input type="text" id="goalInput">
+    <button onclick="addGoal()">Add</button>
+    <ul id="goalList"></ul>
+</div>
+
+<!-- PLANNER -->
+<div id="planner" class="section">
+    <h2>📅 Planner</h2>
+    <input type="text" id="planInput">
+    <button onclick="addPlan()">Add</button>
+    <ul id="planList"></ul>
+</div>
+
+<!-- HABITS -->
+<div id="habits" class="section">
+    <h2>🧠 Habits</h2>
+    <input type="text" id="habitInput">
+    <button onclick="addHabit()">Add</button>
+    <ul id="habitList"></ul>
+    <p id="habitStats"></p>
+    <p id="streak"></p>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="section">
+    <h2>🧾 Profile</h2>
+
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="saveProfile()">Save</button>
+
+    <p id="profileName"></p>
+    </div>
+
+<div id="profilePopup" class="profile-popup">
+
+    <div class="profile-box">
+
+        <h2>My Profile</h2>
+
+        <!-- DISPLAY DATA -->
+        <div id="profileView">
+            <p><b>Name:</b> <span id="displayName"></span></p>
+            <p><b>Number:</b> <span id="displayNumber"></span></p>
+            <p><b>Details:</b> <span id="displayBio"></span></p>
+        </div>
+
+        <!-- INPUT FORM -->
+        <div id="profileForm">
+            <input type="text" id="profileNameInput" placeholder="Enter name">
+            <input type="text" id="profileNumberInput" placeholder="Enter number">
+            <input type="text" id="profileBioInput" placeholder="Enter details">
+        </div>
+
+        <button onclick="saveProfile()">Save</button>
+        <button onclick="editProfile()">Edit</button>
+        <button onclick="clearProfile()">Clear</button>
+        <button onclick="closeProfile()">Close</button>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
